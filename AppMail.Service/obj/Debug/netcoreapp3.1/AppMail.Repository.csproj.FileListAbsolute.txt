@@ -1,0 +1,11 @@
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\bin\Debug\netcoreapp3.1\AppMail.Repository.deps.json
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\bin\Debug\netcoreapp3.1\AppMail.Repository.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\bin\Debug\netcoreapp3.1\AppMail.Repository.pdb
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\bin\Debug\netcoreapp3.1\AppMail.Domain.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\bin\Debug\netcoreapp3.1\AppMail.Domain.pdb
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\obj\Debug\netcoreapp3.1\AppMail.Repository.csprojAssemblyReference.cache
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\obj\Debug\netcoreapp3.1\AppMail.Repository.AssemblyInfoInputs.cache
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\obj\Debug\netcoreapp3.1\AppMail.Repository.AssemblyInfo.cs
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\obj\Debug\netcoreapp3.1\AppMail.Repository.csproj.CopyComplete
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\obj\Debug\netcoreapp3.1\AppMail.Repository.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Service\obj\Debug\netcoreapp3.1\AppMail.Repository.pdb

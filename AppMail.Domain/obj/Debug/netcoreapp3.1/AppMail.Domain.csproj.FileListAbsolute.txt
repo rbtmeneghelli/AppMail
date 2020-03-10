@@ -1,0 +1,7 @@
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\bin\Debug\netcoreapp3.1\AppMail.Domain.deps.json
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\bin\Debug\netcoreapp3.1\AppMail.Domain.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\bin\Debug\netcoreapp3.1\AppMail.Domain.pdb
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\obj\Debug\netcoreapp3.1\AppMail.Domain.AssemblyInfoInputs.cache
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\obj\Debug\netcoreapp3.1\AppMail.Domain.AssemblyInfo.cs
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\obj\Debug\netcoreapp3.1\AppMail.Domain.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail.Domain\obj\Debug\netcoreapp3.1\AppMail.Domain.pdb

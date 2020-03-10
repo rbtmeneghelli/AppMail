@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AppMail/1.0.0": {
+        "dependencies": {
+          "AppMail.Service": "1.0.0"
+        },
+        "runtime": {
+          "AppMail.dll": {}
+        }
+      },
+      "AppMail.Domain/1.0.0": {
+        "runtime": {
+          "AppMail.Domain.dll": {}
+        }
+      },
+      "AppMail.Service/1.0.0": {
+        "dependencies": {
+          "AppMail.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AppMail.Service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AppMail/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AppMail.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AppMail.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

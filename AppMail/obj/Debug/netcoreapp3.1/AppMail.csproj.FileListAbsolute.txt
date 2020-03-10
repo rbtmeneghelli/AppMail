@@ -1,0 +1,16 @@
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.exe
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.deps.json
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.runtimeconfig.json
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.runtimeconfig.dev.json
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.pdb
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.Domain.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.Service.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.Service.pdb
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\bin\Debug\netcoreapp3.1\AppMail.Domain.pdb
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\obj\Debug\netcoreapp3.1\AppMail.csprojAssemblyReference.cache
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\obj\Debug\netcoreapp3.1\AppMail.AssemblyInfoInputs.cache
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\obj\Debug\netcoreapp3.1\AppMail.AssemblyInfo.cs
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\obj\Debug\netcoreapp3.1\AppMail.csproj.CopyComplete
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\obj\Debug\netcoreapp3.1\AppMail.dll
+D:\Pasta_Roberto\Projetos\AppMail\AppMail\obj\Debug\netcoreapp3.1\AppMail.pdb

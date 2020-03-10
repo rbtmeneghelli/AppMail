@@ -1,0 +1,4 @@
+- Dentro da pasta bin // debug // netcoreapp3.1 deve-se colocar os seguintes arquivos:
+1 - Colocar o arquivo PDF, DOCX ou DOC do CV a ser enviado
+2 - Colocar um arquivo texto com os emails separados por ";", onde será enviado os emails de forma automatica
+3 - Usufruir a ferramenta

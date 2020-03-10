@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppMail", "AppMail\AppMail.csproj", "{85CA3540-01DD-4D37-B71A-0EEB36026173}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{E3BEE01D-3EA0-4F2C-B99F-5625AC3C825F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Repository", "3 - Repository", "{4A7B9199-72BB-4053-B9B1-C0D47A3093F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{486DCB58-D791-443E-BCFB-D4A7F9AB8BF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{C52F77B2-A007-4567-B6B5-D3483904F320}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppMail.Service", "AppMail.Service\AppMail.Service.csproj", "{4255F6E0-111E-4D39-A84D-04DE9D1A35D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppMail.Domain", "AppMail.Domain\AppMail.Domain.csproj", "{9B2BF9D8-0346-422B-93F0-4C50977B5B80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D5E2200C-AB61-4B18-832D-BCB63E61D0C3}"
+	ProjectSection(SolutionItems) = preProject
+		LEIAME.txt = LEIAME.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85CA3540-01DD-4D37-B71A-0EEB36026173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85CA3540-01DD-4D37-B71A-0EEB36026173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85CA3540-01DD-4D37-B71A-0EEB36026173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85CA3540-01DD-4D37-B71A-0EEB36026173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4255F6E0-111E-4D39-A84D-04DE9D1A35D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4255F6E0-111E-4D39-A84D-04DE9D1A35D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4255F6E0-111E-4D39-A84D-04DE9D1A35D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4255F6E0-111E-4D39-A84D-04DE9D1A35D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2BF9D8-0346-422B-93F0-4C50977B5B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2BF9D8-0346-422B-93F0-4C50977B5B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2BF9D8-0346-422B-93F0-4C50977B5B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2BF9D8-0346-422B-93F0-4C50977B5B80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85CA3540-01DD-4D37-B71A-0EEB36026173} = {486DCB58-D791-443E-BCFB-D4A7F9AB8BF7}
+		{4255F6E0-111E-4D39-A84D-04DE9D1A35D9} = {4A7B9199-72BB-4053-B9B1-C0D47A3093F0}
+		{9B2BF9D8-0346-422B-93F0-4C50977B5B80} = {E3BEE01D-3EA0-4F2C-B99F-5625AC3C825F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5501AB5-DE72-47E5-BA08-8FEE27F461B0}
+	EndGlobalSection
+EndGlobal
