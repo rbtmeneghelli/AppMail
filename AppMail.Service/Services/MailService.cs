@@ -3,13 +3,14 @@ using AppMail.Domain.Interface;
 using System;
 using System.Net;
 using System.Net.Mail;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AppMail.Service
 {
     public class MailService : IMailService
     {
-        private Email getEmailSettings(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico)
+        private async Task<Email> getEmailSettings(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico)
         {
             Email email = new Email();
             email.Id = new Guid();
@@ -22,16 +23,15 @@ namespace AppMail.Service
                 email.MensagemEmail = MensagemEmail;
                 email.ArquivoAnexo = ArquivoAnexo;
             }
-            return email;
+            return await Task.FromResult(email);
         }
 
-        public void SendMailService(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico)
+        public async Task SendMailService(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico)
         {
             // Habilitar a opção, através desse link: https://myaccount.google.com/lesssecureapps
             try
             {
-                bool emailEnviado = false;
-                Email email = getEmailSettings(EmailTo, EmailCc, TituloEmail, MensagemEmail, ArquivoAnexo, EmailAutomatico);
+                Email email = await getEmailSettings(EmailTo, EmailCc, TituloEmail, MensagemEmail, ArquivoAnexo, EmailAutomatico);
                 MailMessage mail = new MailMessage();
                 mail.IsBodyHtml = true;
                 mail.From = new MailAddress("email@gmail.com");
@@ -45,8 +45,9 @@ namespace AppMail.Service
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.UseDefaultCredentials = false;
                     smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential("email@gmail.com", "XXXXXX");
-                    smtp.Send(mail);
+                    smtp.Credentials = new NetworkCredential("email@gmail.com", "XXXXXXXX");
+                    await Task.FromResult(smtp.SendMailAsync(mail));
+                    Thread.Sleep(1);
                 }
             }
             catch (Exception ex)

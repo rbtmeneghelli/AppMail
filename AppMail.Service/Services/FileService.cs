@@ -11,7 +11,7 @@ namespace AppMail.Repository
 {
     public class FileService : IFileService
     {
-        private List<string> getListaEmail(string filePath)
+        private async Task<List<string>> getListaEmail(string filePath)
         {
             List<string> listaEmails = new List<string>();
             if (File.Exists(filePath))
@@ -25,23 +25,23 @@ namespace AppMail.Repository
                     }
                 }
             }
-            return listaEmails;
+            return await Task.FromResult(listaEmails);
         }
 
-        private string[] getEmailFile(string Path)
+        private async Task<string[]> getEmailFile(string Path)
         {
             if (Directory.Exists(Path))
             {
                 string[] files = Directory.GetFiles(Path, "*.txt");
                 if (files.Length > 0)
                 {
-                    return files;
+                    return await Task.FromResult(files);
                 }
             }
             return null;
         }
 
-        private string[] getPdfOrDocFile(string Path)
+        private async Task<string[]> getPdfOrDocFile(string Path)
         {
             if (Directory.Exists(Path))
             {
@@ -49,40 +49,40 @@ namespace AppMail.Repository
                 string[] filesWordx = Directory.GetFiles(Path, "*.docx");
                 string[] filesWord = Directory.GetFiles(Path, "*.doc");
                 if (filesPdf.Length > 0)
-                    return filesPdf;
+                    return await Task.FromResult(filesPdf);
                 else if (filesWordx.Length > 0)
-                    return filesWordx;
+                    return await Task.FromResult(filesWordx);
                 else if (filesWord.Length > 0)
-                    return filesWord;
+                    return await Task.FromResult(filesWord);
             }
             return null;
         }
 
-        public bool generateEmail(string? EmailTo, List<string> EmailCc, string? TituloEmail, string? MensagemEmail, bool? EmailAutomatico = true)
+        public async Task<bool> generateEmail(string? EmailTo, List<string> EmailCc, string? TituloEmail, string? MensagemEmail, bool? EmailAutomatico = true)
         {
             MailService mailService = new MailService();
-            string[] listaEmail = getEmailFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
-            string[] anexoEmail = getPdfOrDocFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
+            string[] listaEmail = await getEmailFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
+            string[] anexoEmail = await getPdfOrDocFile(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
 
             if (anexoEmail == null)
             {
-                return false;
+                return await Task.FromResult(false);
             }
             else
             {
 
                 if ((bool)EmailAutomatico)
                 {
-                    foreach (var emailTo in getListaEmail(listaEmail[0]))
+                    foreach (var emailTo in await getListaEmail(listaEmail[0]))
                     {
-                        mailService.SendMailService(emailTo, null, TituloEmail, MensagemEmail, anexoEmail[0], true);
+                        await mailService.SendMailService(emailTo, null, TituloEmail, MensagemEmail, anexoEmail[0], true);
                     }
                 }
                 else
                 {
-                    mailService.SendMailService(EmailTo, string.Join(";", EmailCc), TituloEmail, MensagemEmail, anexoEmail[0], false);
+                    await mailService.SendMailService(EmailTo, string.Join(";", EmailCc), TituloEmail, MensagemEmail, anexoEmail[0], false);
                 }
-                return true;
+                return await Task.FromResult(true);
             }
         }
     }

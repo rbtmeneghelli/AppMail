@@ -7,8 +7,8 @@ namespace AppMail.Domain.Interface
 {
     public interface IAppService
     {
-        public void SystemOptions();
-        public bool CheckOptionChoosedByUserIsOk(string Option);
-        public void CheckOptionChoosedByUser(string Option);
+        public Task SystemOptions();
+        public Task<bool> CheckOptionChoosedByUserIsOk(string Option);
+        public Task CheckOptionChoosedByUser(string Option);
     }
 }

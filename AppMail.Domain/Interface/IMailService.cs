@@ -8,6 +8,6 @@ namespace AppMail.Domain.Interface
 {
     public interface IMailService
     {
-        public void SendMailService(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico);
+        public Task SendMailService(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico);
     }
 }

@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail\\AppMail.csproj": {}
+    "D:\\Git\\AppMail\\AppMail\\AppMail.csproj": {}
   },
   "projects": {
-    "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj": {
+    "D:\\Git\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj",
+        "projectUniqueName": "D:\\Git\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj",
         "projectName": "AppMail.Domain",
-        "projectPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj",
-        "packagesPath": "C:\\Users\\Tria06\\.nuget\\packages\\",
-        "outputPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Domain\\obj\\",
+        "projectPath": "D:\\Git\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj",
+        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\AppMail\\AppMail.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tria06\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -57,27 +55,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Service\\AppMail.Service.csproj": {
+    "D:\\Git\\AppMail\\AppMail.Service\\AppMail.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Service\\AppMail.Service.csproj",
+        "projectUniqueName": "D:\\Git\\AppMail\\AppMail.Service\\AppMail.Service.csproj",
         "projectName": "AppMail.Service",
-        "projectPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Service\\AppMail.Service.csproj",
-        "packagesPath": "C:\\Users\\Tria06\\.nuget\\packages\\",
-        "outputPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Service\\obj\\",
+        "projectPath": "D:\\Git\\AppMail\\AppMail.Service\\AppMail.Service.csproj",
+        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\AppMail\\AppMail.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tria06\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -89,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj": {
-                "projectPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj"
+              "D:\\Git\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj": {
+                "projectPath": "D:\\Git\\AppMail\\AppMail.Domain\\AppMail.Domain.csproj"
               }
             }
           }
@@ -118,27 +114,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail\\AppMail.csproj": {
+    "D:\\Git\\AppMail\\AppMail\\AppMail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail\\AppMail.csproj",
+        "projectUniqueName": "D:\\Git\\AppMail\\AppMail\\AppMail.csproj",
         "projectName": "AppMail",
-        "projectPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail\\AppMail.csproj",
-        "packagesPath": "C:\\Users\\Tria06\\.nuget\\packages\\",
-        "outputPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail\\obj\\",
+        "projectPath": "D:\\Git\\AppMail\\AppMail\\AppMail.csproj",
+        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\AppMail\\AppMail\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tria06\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -150,8 +144,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Service\\AppMail.Service.csproj": {
-                "projectPath": "D:\\Pasta_Roberto\\Projetos\\AppMail\\AppMail.Service\\AppMail.Service.csproj"
+              "D:\\Git\\AppMail\\AppMail.Service\\AppMail.Service.csproj": {
+                "projectPath": "D:\\Git\\AppMail\\AppMail.Service\\AppMail.Service.csproj"
               }
             }
           }
@@ -179,7 +173,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

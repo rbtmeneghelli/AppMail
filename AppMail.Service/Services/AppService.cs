@@ -14,7 +14,7 @@ namespace AppMail.Repository
         private string tituloEmail;
         private string mensagemEmail;
 
-        public void SystemOptions()
+        public async Task SystemOptions()
         {
             bool optionIsValid = false;
             Console.WriteLine("****************************************************************************************");
@@ -26,15 +26,15 @@ namespace AppMail.Repository
             while (optionIsValid != true)
             {
                 string option = Console.ReadLine();
-                if (CheckOptionChoosedByUserIsOk(option))
+                if (await CheckOptionChoosedByUserIsOk(option))
                 {
                     optionIsValid = true;
-                    CheckOptionChoosedByUser(option);
+                    await CheckOptionChoosedByUser(option);
                 }
             }
         }
 
-        public bool CheckOptionChoosedByUserIsOk(string Option)
+        public async Task<bool> CheckOptionChoosedByUserIsOk(string Option)
         {
             if (string.IsNullOrWhiteSpace(Option))
             {
@@ -43,20 +43,20 @@ namespace AppMail.Repository
                 Console.WriteLine("Escolha uma das opções acima digitando seu numero na tela e pressione a tecla Enter");
                 Console.WriteLine("****************************************************************************************");
                 Console.ReadLine();
-                return false;
+                return await Task.FromResult(false);
             }
-            return true;
+            return await Task.FromResult(true);
         }
 
-        public void CheckOptionChoosedByUser(string Option)
+        public async Task CheckOptionChoosedByUser(string Option)
         {
             switch (Convert.ToInt32(Option))
             {
                 case 1:
-                    ExecuteOption_SendManualMail();
+                    await ExecuteOption_SendManualMail();
                     break;
                 case 2:
-                    ExecuteOption_SendAutomaticMail();
+                    await ExecuteOption_SendAutomaticMail();
                     break;
                 case 3:
                     ExecuteOption_CloseApp();
@@ -64,15 +64,15 @@ namespace AppMail.Repository
             }
         }
 
-        private void setEmailSettings()
+        private async Task setEmailSettings()
         {
-            setEmailTo();
-            setEmailCc();
-            setEmailTitle();
-            setEmailMessage();
+            await setEmailTo();
+            await setEmailCc();
+            await setEmailTitle();
+            await setEmailMessage();
         }
 
-        private void setEmailTo()
+        private async Task setEmailTo()
         {
             ClearConsoleWindow();
             Console.WriteLine("****************************************************************************************");
@@ -81,7 +81,7 @@ namespace AppMail.Repository
             emailTo = Console.ReadLine();
         }
 
-        private void setEmailCc()
+        private async Task setEmailCc()
         {
             ClearConsoleWindow();
             Console.WriteLine("****************************************************************************************");
@@ -97,7 +97,7 @@ namespace AppMail.Repository
             }
         }
 
-        private void setEmailTitle()
+        private async Task setEmailTitle()
         {
             ClearConsoleWindow();
             Console.WriteLine("****************************************************************************************");
@@ -106,7 +106,7 @@ namespace AppMail.Repository
             tituloEmail = Console.ReadLine();
         }
 
-        private void setEmailMessage()
+        private async Task setEmailMessage()
         {
             ClearConsoleWindow();
             Console.WriteLine("****************************************************************************************");
@@ -115,14 +115,15 @@ namespace AppMail.Repository
             mensagemEmail = Console.ReadLine();
         }
 
-        private void ExecuteOption_SendManualMail()
+        private async Task ExecuteOption_SendManualMail()
         {
             FileService fileService = new FileService();
-            setEmailSettings();
+            await setEmailSettings();
             ClearConsoleWindow();
             Console.WriteLine("****************************************************************************************");
             Console.WriteLine("Processando Envio de Email Manual, por favor aguarde...");
-            if(fileService.generateEmail(emailTo, emailCc, tituloEmail, mensagemEmail, false))
+            Console.WriteLine("****************************************************************************************");
+            if (await fileService.generateEmail(emailTo, emailCc, tituloEmail, mensagemEmail, false))
             {
                 ExecuteOption_CloseSuccess();
             }
@@ -132,13 +133,14 @@ namespace AppMail.Repository
             }
         }
 
-        private void ExecuteOption_SendAutomaticMail()
+        private async Task ExecuteOption_SendAutomaticMail()
         {
             FileService fileService = new FileService();
             ClearConsoleWindow();
             Console.WriteLine("****************************************************************************************");
             Console.WriteLine("Processando Envio de Email Automatico, aguarde...");
-            if(fileService.generateEmail("", null, "", "", true))
+            Console.WriteLine("****************************************************************************************");
+            if (await fileService.generateEmail("", null, "", "", true))
             {
                 ExecuteOption_CloseSuccess();
             } else
