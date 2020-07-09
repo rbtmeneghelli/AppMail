@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AppMail.Repository
@@ -58,6 +59,12 @@ namespace AppMail.Repository
             return null;
         }
 
+        private void ExecuteOption_MailProcess()
+        {
+            Console.WriteLine("****************************************************************************************");
+            Console.WriteLine($"O processo de envio de email foi finalizado. Pressione a tecla <Enter> para continuar usando o sistema");
+        }
+
         public async Task<bool> generateEmail(string? EmailTo, List<string> EmailCc, string? TituloEmail, string? MensagemEmail, bool? EmailAutomatico = true)
         {
             MailService mailService = new MailService();
@@ -82,6 +89,8 @@ namespace AppMail.Repository
                 {
                     await mailService.SendMailService(EmailTo, string.Join(";", EmailCc), TituloEmail, MensagemEmail, anexoEmail[0], false);
                 }
+                ExecuteOption_MailProcess();
+                Thread.Sleep(TimeSpan.FromSeconds(10));
                 return await Task.FromResult(true);
             }
         }

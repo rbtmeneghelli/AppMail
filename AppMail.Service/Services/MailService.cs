@@ -10,6 +10,16 @@ namespace AppMail.Service
 {
     public class MailService : IMailService
     {
+        private void ExecuteOption_SendMailSuccess(string email)
+        {
+            Console.WriteLine($"O seu email para o destinatario {email} foi enviado com sucesso");
+        }
+
+        private void ExecuteOption_SendMailError(string email)
+        {
+            Console.WriteLine($"O seu email para o destinatario {email} apresentou falha de envio");
+        }
+
         private async Task<Email> getEmailSettings(string? EmailTo, string? EmailCc, string? TituloEmail, string? MensagemEmail, string? ArquivoAnexo, bool? EmailAutomatico)
         {
             Email email = new Email();
@@ -34,7 +44,7 @@ namespace AppMail.Service
                 Email email = await getEmailSettings(EmailTo, EmailCc, TituloEmail, MensagemEmail, ArquivoAnexo, EmailAutomatico);
                 MailMessage mail = new MailMessage();
                 mail.IsBodyHtml = true;
-                mail.From = new MailAddress("email@gmail.com");
+                mail.From = new MailAddress("teste@gmail.com");
                 mail.To.Add(EmailTo);
                 mail.Subject = email.TituloEmail;
                 mail.Body = email.MensagemEmail;
@@ -44,15 +54,18 @@ namespace AppMail.Service
                     smtp.Port = 587;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.UseDefaultCredentials = false;
-                    smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential("email@gmail.com", "XXXXXXXX");
-                    await Task.FromResult(smtp.SendMailAsync(mail));
-                    Thread.Sleep(1);
+                    smtp.EnableSsl = false;
+                    smtp.Credentials = new NetworkCredential("teste@gmail.com", "XXXXX");
+                    smtp.SendMailAsync(mail).Wait();
+                    Thread.Sleep(TimeSpan.FromSeconds(5));
+                    ExecuteOption_SendMailSuccess(EmailTo);
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex.InnerException);
+                Thread.Sleep(TimeSpan.FromSeconds(5));
+                ExecuteOption_SendMailError(EmailTo);
+                //throw new Exception(ex.Message, ex.InnerException);
             }
         }
     }

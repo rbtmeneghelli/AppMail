@@ -36,16 +36,11 @@ namespace AppMail.Repository
 
         public async Task<bool> CheckOptionChoosedByUserIsOk(string Option)
         {
-            if (string.IsNullOrWhiteSpace(Option))
+            if (!string.IsNullOrWhiteSpace(Option) && int.TryParse(Option, out _))
             {
-                ClearConsoleWindow();
-                Console.WriteLine("****************************************************************************************");
-                Console.WriteLine("Escolha uma das opções acima digitando seu numero na tela e pressione a tecla Enter");
-                Console.WriteLine("****************************************************************************************");
-                Console.ReadLine();
-                return await Task.FromResult(false);
+                return int.Parse(Option) <= 3 ? await Task.FromResult(true) : await Task.FromResult(false);
             }
-            return await Task.FromResult(true);
+            return await Task.FromResult(false);
         }
 
         public async Task CheckOptionChoosedByUser(string Option)
@@ -127,7 +122,7 @@ namespace AppMail.Repository
             {
                 ExecuteOption_CloseSuccess();
             }
-           else
+            else
             {
                 ExecuteOption_AlertFile();
             }
@@ -143,16 +138,17 @@ namespace AppMail.Repository
             if (await fileService.generateEmail("", null, "", "", true))
             {
                 ExecuteOption_CloseSuccess();
-            } else
+            }
+            else
             {
                 ExecuteOption_AlertFile();
             }
-       
+
         }
 
         private void ExecuteOption_CloseApp()
         {
-            ClearConsoleWindow();
+            Environment.Exit(0);
         }
 
         private void ExecuteOption_AlertFile()
@@ -169,14 +165,9 @@ namespace AppMail.Repository
 
         private void ExecuteOption_CloseSuccess()
         {
-            ClearConsoleWindow();
-            Console.WriteLine("****************************************************************************************");
-            Console.WriteLine("Os emails foram enviados a seus destinatarios com sucesso");
-            Console.WriteLine("****************************************************************************************");
             Console.ReadKey();
             ClearConsoleWindow();
             SystemOptions();
-
         }
 
         private void ClearConsoleWindow()
